@@ -5,8 +5,7 @@
   Caps: main.py <=4096 B, repo <=8192 B, Py3.13 stdlib, fixed-node
   search, 10 s/move, 1800 s/trial.
 - 00:01 kit downloaded (6,937,033 B), extracted. Read RULES.txt,
-  starter, kit.json, trial-0, compress help. Env server local;
-  no Docker in VM.
+  starter, kit.json, trial-0, compress help.
 - 00:03 compress verified on dummy (stub `#coding:l1` + lzma, ~75 B).
   Plan: original 0x88 engine, negamax + quiescence, TT, MVV-LVA/
   killer/history ordering, iterative deepening, fixed node budget,
@@ -16,7 +15,6 @@
   king moves (CM[e1]=12, CM[e8]=3). Perft 21/21 pass vs
   python-chess (startpos d4 197281, kiwipete d3 97862, pos3 d4
   43238, pos4 d4 422333, pos5 d3 62379, pos6 d3 89890).
-- 00:10 bench: mate-in-1 Qxf7 found, deterministic, 11-30k nps.
 - 00:12 hand-minified: src.py 10,269 B. Perft 21/21, bench
   deterministic. Compress -> main.py 3,984 B.
 - 00:20 trial-0 local: 1W 1D 4L, Elo 997. G1 time loss = my stray
