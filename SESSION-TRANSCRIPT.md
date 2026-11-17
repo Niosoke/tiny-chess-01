@@ -30,13 +30,5 @@
   wins (d3,d4,100k), G1/G5 draws, G6 loss 500k. BUT max move 9.18 s
   (mean 2.05 s, p99 4.5 s): too close to 10 s under VM contention.
   BD cut to 50000 for safety.
-- 01:05 trial-1 (v2, BD 50000): 2W 2D 2L, Elo 1279. Max move 3.36 s
-  (mean 1.49 s) but Elo fell 172 vs trial-0c; G4 collapsed vs 100k
-  (piece ply 10, queen ply 64). BD cost likely real but confounded
-  by openings. BD back to 70000 for trial-2 (clean comparison);
-  9.18 s max was one contention spike in 311 moves.
-- 01:25 trial-2 (v2, BD 70000): 2W 3D 1L, Elo 1364. Max move 4.57 s.
-  v2: 1451/1364 at 70k, 1279 at 50k.
-- 01:50 v3 aspiration (+-45): +1 ply bench, but trial-0 1W 2D 3L,
-  Elo 1099 (v2: 1451 same openings). REVERTED to v2; main.py sha
-  verified = trial-0c binary.
+- 01:50 v3 aspiration (+-45): REVERTED to v2 (Elo 1099 vs 1451);
+  main.py sha verified.
